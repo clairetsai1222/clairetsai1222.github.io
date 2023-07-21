@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Claire • All posts by \"robotics;computational complexity;motion planning\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2023/07/21/Computationnal-complexity/",
+            "url": "http://example.com/2023/07/21/Computationnal-complexity/",
+            "title": "Computationnal complexity",
+            "date_published": "2023-07-21T06:50:47.000Z",
+            "content_html": "<h1 id=\"computational-complexity\"><a class=\"markdownIt-Anchor\" href=\"#computational-complexity\">#</a> Computational complexity</h1>\n<p>计算复杂度（Computational complexity）是算法进行运算时用于衡量所使用资源多寡的概念，通常会以大写 O 来表示（O），它通常用于辅助使用者选择更加高效或者使用资源较少的算法以优化程序性能，计算复杂度主要关注两点 —— 空间与时间，它们分别被称为空间复杂度和时间复杂度，计算复杂度标识具体指代哪一种复杂度或者同时意指两者取决于具体讨论的问题。</p>\n<ol>\n<li>空间复杂度指估计算法执行过程中所需要的内存资源或额外的存储空间支持，空间复杂度指标会显示出随着解决的问题规模越大（所用元素和维度越多），则它需要的资源会如何增长；</li>\n<li>时间复杂度指算法运行并解决问题所需要的计算时间，和空间复杂度相同，它表示算法运行时间与问题规模之间的关系，时间复杂度越低，则算法的执行速度将越快。</li>\n</ol>\n",
+            "tags": [
+                "Robotics;Computational complexity;Motion Planning"
+            ]
+        }
+    ]
+}

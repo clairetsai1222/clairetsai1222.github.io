@@ -4,15 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Claire</title>
+  <title>Computational Motion Planning for Robotics | Claire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Claire">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="# 第一周 ​		路径规划的目的为让机器人从设定的起始点（Start note）以基于用户要求的条件移动到终点（End note） # 以图为基础的路径规划算法 # Grassfire Algorithm  算法思想  火线算法（Grassfire Algorithm）为广度优先搜索算法的一种特例，如同其名 —— 野火燎原，它中将起始点类比为薪火，假设设定机器人的初始位置（起始点）设置为 0，并且">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computational Motion Planning for Robotics">
+<meta property="og:url" content="http://example.com/2023/07/20/Computational-Motion-Planning-for-Robotics/index.html">
 <meta property="og:site_name" content="Claire">
+<meta property="og:description" content="# 第一周 ​		路径规划的目的为让机器人从设定的起始点（Start note）以基于用户要求的条件移动到终点（End note） # 以图为基础的路径规划算法 # Grassfire Algorithm  算法思想  火线算法（Grassfire Algorithm）为广度优先搜索算法的一种特例，如同其名 —— 野火燎原，它中将起始点类比为薪火，假设设定机器人的初始位置（起始点）设置为 0，并且">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/07/20/Computational-Motion-Planning-for-Robotics/CMP/Grassfire-notes.png">
+<meta property="og:image" content="http://example.com/2023/07/20/Computational-Motion-Planning-for-Robotics/CMP/Dijstra%27s-example.png">
+<meta property="og:image" content="http://example.com/2023/07/20/Computational-Motion-Planning-for-Robotics/CMP/DijkstraDemo.gif">
+<meta property="article:published_time" content="2023-07-20T07:11:11.000Z">
+<meta property="article:modified_time" content="2023-07-21T12:25:07.267Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Robotics; Motion Planning; coursera">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/20/Computational-Motion-Planning-for-Robotics/CMP/Grassfire-notes.png">
   
     
   
@@ -71,107 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/21/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-07-21T15:44:53.409Z" itemprop="datePublished">2023-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/21/hello-world/" data-id="clkcr8eia0003egvja028ausx" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Computationnal-complexity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/21/Computationnal-complexity/" class="article-date">
-  <time class="dt-published" datetime="2023-07-21T06:50:47.000Z" itemprop="datePublished">2023-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/21/Computationnal-complexity/">Computationnal complexity</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="computational-complexity"><a class="markdownIt-Anchor" href="#computational-complexity">#</a> Computational complexity</h1>
-<p>计算复杂度（Computational complexity）是算法进行运算时用于衡量所使用资源多寡的概念，通常会以大写 O 来表示（O），它通常用于辅助使用者选择更加高效或者使用资源较少的算法以优化程序性能，计算复杂度主要关注两点 —— 空间与时间，它们分别被称为空间复杂度和时间复杂度，计算复杂度标识具体指代哪一种复杂度或者同时意指两者取决于具体讨论的问题。</p>
-<ol>
-<li>空间复杂度指估计算法执行过程中所需要的内存资源或额外的存储空间支持，空间复杂度指标会显示出随着解决的问题规模越大（所用元素和维度越多），则它需要的资源会如何增长；</li>
-<li>时间复杂度指算法运行并解决问题所需要的计算时间，和空间复杂度相同，它表示算法运行时间与问题规模之间的关系，时间复杂度越低，则算法的执行速度将越快。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/21/Computationnal-complexity/" data-id="clkcr8ei60000egvj5z825jkd" data-title="Computationnal complexity" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Robotics-Computational-complexity-Motion-Planning/" rel="tag">Robotics;Computational complexity;Motion Planning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Computational-Motion-Planning-for-Robotics" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Computational-Motion-Planning-for-Robotics" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/07/20/Computational-Motion-Planning-for-Robotics/" class="article-date">
   <time class="dt-published" datetime="2023-07-20T07:11:11.000Z" itemprop="datePublished">2023-07-20</time>
@@ -184,8 +93,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/20/Computational-Motion-Planning-for-Robotics/">Computational Motion Planning for Robotics</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Computational Motion Planning for Robotics
     </h1>
   
 
@@ -303,11 +212,23 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
+  
+    <a href="/2023/07/21/Computationnal-complexity/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Computationnal complexity
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 
 </section>
